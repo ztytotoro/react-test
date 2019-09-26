@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from 'assets/logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
-import { MimicRuntime, registerControl } from 'core/runtime';
+import { MimicRuntime, registerControl, renderRuntime } from 'core/runtime';
 import { Controls, TestControl, NewTestControl } from 'controls';
 import { size, pos } from 'core/utils';
 
@@ -21,6 +20,16 @@ const App: React.FC = () => {
       ...pos(50, 50)
     })
   ];
+  const mount = renderRuntime({
+    ...size(1920, 1080),
+    controls
+  });
+  useEffect(() => {
+    const container = document.getElementById('container');
+    if (container) {
+      mount(container);
+    }
+  }, []);
   return (
     <div
       id="container"
@@ -28,9 +37,7 @@ const App: React.FC = () => {
         height: '100vh',
         width: '100vw'
       }}
-    >
-      <MimicRuntime {...size(1920, 1080)} controls={controls}></MimicRuntime>
-    </div>
+    ></div>
   );
 };
 
