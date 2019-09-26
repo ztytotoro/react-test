@@ -1,24 +1,34 @@
 import React from 'react';
 import logo from 'assets/logo.svg';
 import './App.css';
+import { MimicRuntime, registerControl } from 'core/runtime';
+import { Controls, TestControl, NewTestControl } from 'controls';
+import { size, pos } from 'core/utils';
+
+registerControl(Controls);
 
 const App: React.FC = () => {
+  const controls = [
+    TestControl.option({
+      ...size(400, 300),
+      ...pos(50, 50),
+      props: {
+        text: '123'
+      }
+    }),
+    NewTestControl.option({
+      ...size(800, 300),
+      ...pos(50, 50)
+    })
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        height: '100vh',
+        width: '100vw'
+      }}
+    >
+      <MimicRuntime {...size(1920, 1080)} controls={controls}></MimicRuntime>
     </div>
   );
 };
