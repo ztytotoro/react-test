@@ -1,6 +1,5 @@
 import React from 'react';
-import { createControl } from 'core/control';
-import produce from 'immer';
+import { createControl } from '../../../lib/dist';
 
 interface Props {
   text: string;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createControl } from 'core/control';
+import { createControl } from '../../../lib/dist';
 import { TestControl } from 'controls';
 
 export const NewTestControl = createControl('newTest', () => {

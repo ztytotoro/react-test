@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { MimicRuntime, registerControl, renderRuntime } from 'core/runtime';
+import { registerControl, renderRuntime, size, pos } from '../../../lib/dist';
 import { Controls, TestControl, NewTestControl } from 'controls';
-import { size, pos } from 'core/utils';
 
 registerControl(Controls);
 

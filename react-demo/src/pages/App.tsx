@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from 'assets/logo.svg';
 import './App.css';
-import { MimicRuntime, registerControl } from 'core/runtime';
+import { MimicRuntime, registerControl, size, pos } from '../../../lib/dist';
 import { Controls, TestControl, NewTestControl } from 'controls';
-import { size, pos } from 'core/utils';
 
 registerControl(Controls);
 
