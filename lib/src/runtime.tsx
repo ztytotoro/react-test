@@ -1,11 +1,9 @@
-import _React from 'react';
 import { ControlWrapper } from './controlWrapper';
 import { ControlOptions, Control } from './types';
 import { size } from './utils';
-import _ReactDOM from 'react-dom';
+import { importReact } from './react';
 
-const React = globalThis.React || _React;
-const ReactDOM = globalThis.ReactDOM || _ReactDOM;
+const { React, ReactDOM } = importReact();
 
 interface Props {
   height: number;
@@ -48,20 +46,17 @@ export function registerControl(controls: Control[]) {
   controls.forEach(c => (controlMap[c.type] = c.render));
 }
 
-export function renderRuntime(
-  {
-    width,
-    height,
-    controls
-  }: {
-    width: number;
-    height: number;
-    controls: ControlOptions<any>[];
-  },
-  reacctDOM: typeof ReactDOM = ReactDOM
-) {
+export function renderRuntime({
+  width,
+  height,
+  controls
+}: {
+  width: number;
+  height: number;
+  controls: ControlOptions<any>[];
+}) {
   const element = (
     <MimicRuntime {...size(width, height)} controls={controls}></MimicRuntime>
   );
-  return (container: HTMLElement) => reacctDOM.render(element, container);
+  return (container: HTMLElement) => ReactDOM.render(element, container);
 }

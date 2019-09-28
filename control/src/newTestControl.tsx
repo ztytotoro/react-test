@@ -1,7 +1,8 @@
-import { React } from 'react-runtime';
+import { importReact } from 'react-runtime';
 import { createControl } from 'react-runtime';
 import { TestControl } from './testControl';
 
+const { React } = importReact();
 const useState = React.useState;
 
 export const NewTestControl = createControl('newTest', () => {

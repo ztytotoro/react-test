@@ -1,7 +1,7 @@
 import _React from 'react';
 import { ContainerOptions } from './types';
-
-const React = globalThis.React || _React;
+import { importReact } from './react';
+const { React } = importReact();
 
 export const ControlWrapper: React.FC<ContainerOptions> = ({
   height,

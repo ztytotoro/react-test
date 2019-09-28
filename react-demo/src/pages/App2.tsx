@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { registerControl, renderRuntime, size, pos } from 'react-runtime';
 import { Controls, TestControl, NewTestControl } from 'react-control';
-import ReactDOM from 'react-dom';
 
 registerControl(Controls);
 
@@ -20,13 +19,10 @@ const App: React.FC = () => {
       ...pos(50, 50)
     })
   ];
-  const mount = renderRuntime(
-    {
-      ...size(1920, 1080),
-      controls
-    },
-    ReactDOM
-  );
+  const mount = renderRuntime({
+    ...size(1920, 1080),
+    controls
+  });
   useEffect(() => {
     const container = document.getElementById('container');
     if (container) {

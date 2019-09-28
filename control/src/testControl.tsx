@@ -1,5 +1,7 @@
-import { React } from 'react-runtime';
+import { importReact } from 'react-runtime';
 import { createControl } from 'react-runtime';
+
+const { React } = importReact();
 
 interface Props {
   text: string;
