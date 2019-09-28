@@ -9,7 +9,9 @@
     "@types/react-dom": "16.9.1",
     "immer": "^4.0.0",
     "react": "^16.9.0",
+    "react-control": "file:../control",
     "react-dom": "^16.9.0",
+    "react-runtime": "file:../lib",
     "react-scripts": "3.1.2",
     "rxjs": "^6.5.3",
     "typescript": "3.6.3"

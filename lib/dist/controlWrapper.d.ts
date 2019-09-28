@@ -1,3 +1,3 @@
-import React from 'react';
+/// <reference types="react" />
 import { ContainerOptions } from './types';
 export declare const ControlWrapper: React.FC<ContainerOptions>;

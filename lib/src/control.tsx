@@ -1,4 +1,3 @@
-import React from 'react';
 import { Control, ControlOptions } from './types';
 
 export function createControl<T extends {} = {}>(

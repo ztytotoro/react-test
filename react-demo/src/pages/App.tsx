@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { MimicRuntime, registerControl, size, pos } from '../../../lib/dist';
-import { Controls, TestControl, NewTestControl } from 'controls';
+import { MimicRuntime, registerControl, size, pos } from 'react-runtime';
+import { Controls, TestControl, NewTestControl } from 'react-control';
 
 registerControl(Controls);
 

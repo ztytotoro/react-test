@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { createControl } from '../../../lib/dist';
-import { TestControl } from 'controls';
+import { React } from 'react-runtime';
+import { createControl } from 'react-runtime';
+import { TestControl } from './testControl';
+
+const useState = React.useState;
 
 export const NewTestControl = createControl('newTest', () => {
   const [t, updateT] = useState('');

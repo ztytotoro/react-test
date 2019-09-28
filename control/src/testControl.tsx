@@ -1,5 +1,5 @@
-import React from 'react';
-import { createControl } from '../../../lib/dist';
+import { React } from 'react-runtime';
+import { createControl } from 'react-runtime';
 
 interface Props {
   text: string;
