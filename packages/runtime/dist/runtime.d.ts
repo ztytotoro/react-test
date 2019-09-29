@@ -11,5 +11,5 @@ export declare function renderRuntime({ width, height, controls }: {
     width: number;
     height: number;
     controls: ControlOptions<any>[];
-}): (container: HTMLElement) => void;
+}): (container: HTMLElement, refresh?: boolean) => void;
 export {};

@@ -57,5 +57,11 @@ export function renderRuntime({
   const element = (
     <MimicRuntime {...size(width, height)} controls={controls}></MimicRuntime>
   );
-  return (container: HTMLElement) => ReactDOM.render(element, container);
+  let isRendered = false;
+  return (container: HTMLElement, refresh = false) => {
+    if (refresh || !isRendered) {
+      ReactDOM.render(element, container);
+      isRendered = true;
+    }
+  };
 }

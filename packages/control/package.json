@@ -1,6 +1,6 @@
 {
   "name": "@ztytotoro/react-control",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@types/react": "^16.9.3",
-    "@ztytotoro/react-runtime": "0.0.2",
+    "@ztytotoro/react-runtime": "^0.0.2",
     "react": "^16.9.0"
   },
   "publishConfig": {

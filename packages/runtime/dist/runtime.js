@@ -19,6 +19,12 @@ export function registerControl(controls) {
 }
 export function renderRuntime({ width, height, controls }) {
     const element = (React.createElement(MimicRuntime, Object.assign({}, size(width, height), { controls: controls })));
-    return (container) => ReactDOM.render(element, container);
+    let isRendered = false;
+    return (container, refresh = false) => {
+        if (refresh || !isRendered) {
+            ReactDOM.render(element, container);
+            isRendered = true;
+        }
+    };
 }
 //# sourceMappingURL=runtime.js.map
