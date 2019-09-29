@@ -1,5 +1,5 @@
-/// <reference types="react" />
-import { ControlOptions, Control } from './types';
+import React from 'react';
+import { Control, ControlOptions } from './types';
 interface Props {
     height: number;
     width: number;

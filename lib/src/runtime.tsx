@@ -1,9 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { ControlWrapper } from './controlWrapper';
-import { ControlOptions, Control } from './types';
+import { Control, ControlOptions } from './types';
 import { size } from './utils';
-import { importReact } from './react';
-
-const { React, ReactDOM } = importReact();
 
 interface Props {
   height: number;

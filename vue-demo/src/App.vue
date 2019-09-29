@@ -6,7 +6,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
 import { Controls, TestControl, NewTestControl } from "react-control";
 import { registerControl, renderRuntime, size, pos } from "react-runtime";
 
@@ -36,9 +35,6 @@ export default Vue.extend({
     if (container) {
       mount(container);
     }
-  },
-  components: {
-    HelloWorld
   }
 });
 </script>

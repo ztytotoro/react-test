@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface Pos {
   x: number;
   y: number;
